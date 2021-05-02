@@ -1,0 +1,18 @@
+create database login;
+
+use login;
+create table logininfo(
+ id INT,
+ name varchar(50),
+ email varchar(100),
+ password varchar(30)
+); 
+
+
+
+
+
+insert into logininfo (id, name, email, password) values(1 ,"emre", "emre@xyz.com.tr",12345 );
+insert into logininfo (id, name, email, password) values(2 ,"ali", "ali@xyz.com.tr",55684 );
+insert into logininfo (id, name, email, password) values(3 ,"samet", "samet@xyz.com.tr",56942 );
+insert into logininfo (id, name, email, password) values(4 ,"ahmet", "ahmet@xyz.com.tr",56521 );
