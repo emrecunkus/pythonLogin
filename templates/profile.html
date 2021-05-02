@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+<style>
+    body {
+  background-color: lightblue;
+}
+form{
+ text-align: center;
+}
+
+
+table, th, td {
+
+
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 15px;
+}
+th {
+  text-align: center;
+}
+
+h1{
+    color: red;
+  text-align: center;
+}
+tr{
+ text-align: center;
+}
+td{
+text-align: center;}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+</head>
+<body>
+<form action="/" method="post2">
+
+    <h1> Login Successfull, Welcome to your profile  </h1>
+
+    <table class="center">
+         <caption>EXISTING USERS</caption>
+
+        <tr>
+            {% for header in headings %}
+            <th>{{ header }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+        <tr>
+              {% for cell in row %}
+            <td> {{ cell }}</td>
+            {% endfor %}
+        </tr>
+
+        {% endfor %}
+
+
+    </table>
+    <label>
+
+        TO LOG OUT CLICK
+    </label>
+    <button type = "submit"> LOGOUT</button>
+</form>
+</body>
+</html>

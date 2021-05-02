@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <h1>Welcome to Our Registration System! To register, fill the blanks below</h1>
+    <style>
+    body {
+  background-color: yellow;
+}
+form{
+ text-align: center;
+}
+
+
+h2{
+    color: red;
+  text-align: center;
+}
+h1{
+    color: black;
+  text-align: center;
+}
+</style>
+
+
+
+</head>
+<body>
+<form method="post">
+    <label> NAME: </label><br>
+    <input type="text" name="one" id = "name"><br><br>
+    <label> EMAIL: </label><br>
+    <input type="email" name="two" id = "username"><br><br>
+    <label> PASSWORD: </label><br>
+    <input type="password" name="three" id = "password"><br><br>
+    <input type = "submit" value="CREATE USER ">
+
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class=flashes>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    {% block body %}{% endblock %}
+<p><a href="http://127.0.0.1:5000/">Already have an account then click here to login</a></p>
+
+
+</form>
+</body>
+</html>
